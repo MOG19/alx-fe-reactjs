@@ -1,6 +1,7 @@
 import UserProfile from './UserProfile';
 import WelcomeMessage from './WelcomeMessage';
 import Header from './Header';
+import Counter from './Counter';
 import MainContent from './MainContent';
 import Footer from './Footer';
 import { useState } from 'react'
