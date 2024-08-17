@@ -7,5 +7,5 @@ const UserProfile = (props) => {
       </div>
     );
   };
-
+  ["useContext", "UserContext", "react"]
   export default UserProfile;
