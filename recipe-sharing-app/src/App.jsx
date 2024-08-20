@@ -4,11 +4,25 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import RecipeList from './RecipeList';
 import AddRecipeForm from './AddRecipeForm';
+import RecipeDetails from './RecipeDetails';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <Router>
+      <Routes>
+        {/* Home page route */}
+        <Route path="/" element={<HomePage />} />
+
+        {/* Recipe list route */}
+        <Route path="/recipes" element={<RecipeList />} />
+
+        {/* Route for individual recipe details */}
+        <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
+      </Routes>
+    </Router>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
