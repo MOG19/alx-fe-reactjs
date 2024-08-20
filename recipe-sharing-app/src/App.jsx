@@ -6,6 +6,8 @@ import RecipeList from './RecipeList';
 import AddRecipeForm from './AddRecipeForm';
 import RecipeDetails from './RecipeDetails';
 import SearchBar from './SearchBar';
+import FavoritesList from './FavoritesList';
+import RecommendationsList from './RecommendationsList';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   const [count, setCount] = useState(0)
