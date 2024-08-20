@@ -5,6 +5,7 @@ import './App.css'
 import RecipeList from './RecipeList';
 import AddRecipeForm from './AddRecipeForm';
 import RecipeDetails from './RecipeDetails';
+import SearchBar from './SearchBar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   const [count, setCount] = useState(0)
