@@ -18,4 +18,4 @@ const FavoritesList = () => {
   );
 };
 
-export default FavoritesList;
+export default FavoritesList; 
