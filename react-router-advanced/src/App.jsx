@@ -40,3 +40,5 @@ function ProtectedRoute({ children }) {
 }
 
 export default App;
+
+["/blog/:id"]
