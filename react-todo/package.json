@@ -3,14 +3,23 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "test": "jest"
-  },
-  "dependencies": {
+  // "scripts": {
+  //   // "start": "react-scripts start",
+  //   // "build": "react-scripts build",
+  //   "test": "jest"
+  //   // "eject": "react-scripts eject"
+  // },
+ "scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "jest",
+  "eject": "react-scripts eject"
+},
+"dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
-  "devDependencies": {
+"devDependencies": {
     "@eslint/js": "^9.9.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
