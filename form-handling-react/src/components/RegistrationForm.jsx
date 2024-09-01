@@ -16,7 +16,7 @@ const RegistrationForm = () => {
       [name]: value,
     });
   };
-
+  
   const validate = () => {
     let formErrors = {};
     if (!formValues.username) formErrors.username = 'Username is required';
@@ -75,5 +75,5 @@ const RegistrationForm = () => {
     </form>
   );
 };
-
+["if (!username", "if (!email)", "if (!password)"]
 export default RegistrationForm;
