@@ -44,7 +44,6 @@ const RegistrationForm = () => {
           type="text"
           name="username"
           value={formValues.username}
-          value={username}
           onChange={handleChange}
         />
         {errors.username && <p>{errors.username}</p>}
@@ -55,7 +54,6 @@ const RegistrationForm = () => {
           type="email"
           name="email"
           value={formValues.email}
-          value={email}
           onChange={handleChange}
         />
         {errors.email && <p>{errors.email}</p>}
@@ -66,7 +64,6 @@ const RegistrationForm = () => {
           type="password"
           name="password"
           value={formValues.password}
-          value={password}
           onChange={handleChange}
         />
         {errors.password && <p>{errors.password}</p>}
@@ -75,5 +72,4 @@ const RegistrationForm = () => {
     </form>
   );
 };
-["if (!username", "if (!email)", "if (!password)"]
 export default RegistrationForm;
