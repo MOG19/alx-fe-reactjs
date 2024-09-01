@@ -1,8 +1,8 @@
 // src/TodoList.jsx
 import React, { useState } from 'react';
 
-function TodoList() {
-  // Initialize with some demo todos
+const TodoList = () => {
+  // Initialize the state with a few todos
   const [todos, setTodos] = useState([
     { id: 1, text: 'Learn React', completed: false },
     { id: 2, text: 'Build a Todo App', completed: true },
@@ -10,22 +10,19 @@ function TodoList() {
 
   const [newTodo, setNewTodo] = useState('');
 
-  // Add a new todo
+  // Function to add a new todo
   const addTodo = (e) => {
     e.preventDefault();
     if (!newTodo.trim()) return;
 
-    const newTodoItem = {
-      id: Date.now(),
-      text: newTodo.trim(),
-      completed: false,
-    };
-
-    setTodos([...todos, newTodoItem]);
-    setNewTodo(''); // Clear input field
+    setTodos([
+      ...todos,
+      { id: Date.now(), text: newTodo.trim(), completed: false },
+    ]);
+    setNewTodo('');
   };
 
-  // Toggle the completion status of a todo
+  // Function to toggle completion status of a todo
   const toggleTodo = (id) => {
     setTodos(
       todos.map((todo) =>
@@ -34,7 +31,7 @@ function TodoList() {
     );
   };
 
-  // Delete a todo
+  // Function to delete a todo
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
@@ -62,10 +59,12 @@ function TodoList() {
             }}
           >
             {todo.text}
-            <button onClick={(e) => {
-              e.stopPropagation();
-              deleteTodo(todo.id);
-            }}>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                deleteTodo(todo.id);
+              }}
+            >
               Delete
             </button>
           </li>
@@ -73,6 +72,6 @@ function TodoList() {
       </ul>
     </div>
   );
-}
+};
 
 export default TodoList;
