@@ -1,11 +1,23 @@
 import axios from 'axios';
 
-// GitHub API call function
-export const fetchUserData = async (username) => {
+// GitHub API call function for advanced search
+export const fetchAdvancedUserData = async (username, location, minRepos, page = 1) => {
   try {
-    const response = await axios.get(`https://api.github.com/users/${username}`);
+    let query = `q=${username ? `${username}` : ''}`;
+    
+    if (location) {
+      query += `+location:${location}`;
+    }
+
+    if (minRepos) {
+      query += `+repos:>=${minRepos}`;
+    }
+
+    const response = await axios.get(
+      `https://api.github.com/search/users?${query}&page=${page}&per_page=10`
+    );
     return response.data; // Return user data
   } catch (error) {
-    throw new Error('Error fetching user data'); // Handle any API errors
+    throw new Error('Error fetching user data'); // Handle API errors
   }
 };
