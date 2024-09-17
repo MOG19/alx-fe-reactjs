@@ -20,7 +20,7 @@ const Search = () => {
       setLoading(false); // Stop loading
     } catch (err) {
       setLoading(false);
-      setError('Looks like we can\'t find the user'); // Set error message
+      setError('Looks like we cant find the user'); // Set error message
     }
   };
 
