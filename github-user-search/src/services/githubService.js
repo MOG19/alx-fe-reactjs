@@ -14,7 +14,7 @@ export const fetchAdvancedUserData = async (username, location, minRepos, page =
     }
 
     const response = await axios.get(
-      `https://api.github.com/search/users?${query}&page=${page}&per_page=10`
+      `https://api.github.com/search/users?q`
     );
     return response.data; // Return user data
   } catch (error) {
